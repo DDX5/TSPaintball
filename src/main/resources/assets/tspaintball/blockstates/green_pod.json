@@ -1,0 +1,9 @@
+{
+    "variants":{
+        "level=0":{"model":"tspaintball:block/utilities/pods/pod_empty"},
+        "level=1":{"model":"tspaintball:block/utilities/pods/green_pod_1"},
+        "level=2":{"model":"tspaintball:block/utilities/pods/green_pod_2"},
+        "level=3":{"model":"tspaintball:block/utilities/pods/green_pod_3"},
+        "level=4":{"model":"tspaintball:block/utilities/pods/green_pod_4"}
+    }
+}

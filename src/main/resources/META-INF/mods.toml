@@ -1,0 +1,36 @@
+modLoader="javafml" #mandatory
+loaderVersion="[36,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
+license="All rights reserved"
+#issueTrackerURL="https://change.me.to.your.issue.tracker.example.invalid/" #optional
+[[mods]] #mandatory
+modId="tspaintball" #mandatory
+version="0.2.1" #mandatory
+displayName="TS Paaintballing" #mandatory
+updateJSONURL="https://teamserpentalise.uk.nf/update.json" #optional
+displayURL="https://www.curseforge.com/minecraft/mc-mods/ts-paintball" #optional
+logoFile="examplemod.png" #optional
+credits="Random Fhings." #optional
+authors="GamingProVids, Team Serpentalise" #optional
+description='''
+A survival friendly paintballing mod for modern minecraft
+'''
+# A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
+[[dependencies.tspaintball]] #optional
+    # the modid of the dependency
+    modId="forge" #mandatory
+    # Does this dependency have to exist - if not, ordering below must be specified
+    mandatory=true #mandatory
+    # The version range of the dependency
+    versionRange="[36,)" #mandatory
+    # An ordering relationship for the dependency - BEFORE or AFTER required if the relationship is not mandatory
+    ordering="NONE"
+    # Side this dependency is applied on - BOTH, CLIENT or SERVER
+    side="BOTH"
+# Here's another dependency
+[[dependencies.tspaintball]]
+    modId="minecraft"
+    mandatory=true
+# This version range declares a minimum of the current minecraft version up to but not including the next major version
+    versionRange="[1.16.5,1.17)"
+    ordering="NONE"
+    side="BOTH"

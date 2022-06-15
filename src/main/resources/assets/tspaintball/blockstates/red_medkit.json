@@ -1,0 +1,27 @@
+{
+    "variants":{
+        "level=0,facing=north":{"model":"tspaintball:block/utilities/red_medkit_cooldown"},
+        "level=1,facing=north":{"model":"tspaintball:block/utilities/red_medkit"},
+        "level=2,facing=north":{"model":"tspaintball:block/utilities/red_medkit"},
+        "level=3,facing=north":{"model":"tspaintball:block/utilities/red_medkit"},
+        "level=4,facing=north":{"model":"tspaintball:block/utilities/red_medkit"},
+
+        "level=0,facing=south":{"model":"tspaintball:block/utilities/red_medkit_cooldown"},
+        "level=1,facing=south":{"model":"tspaintball:block/utilities/red_medkit"},
+        "level=2,facing=south":{"model":"tspaintball:block/utilities/red_medkit"},
+        "level=3,facing=south":{"model":"tspaintball:block/utilities/red_medkit"},
+        "level=4,facing=south":{"model":"tspaintball:block/utilities/red_medkit"},
+
+        "level=0,facing=east":{"model":"tspaintball:block/utilities/red_medkit_cooldown", "y":90},
+        "level=1,facing=east":{"model":"tspaintball:block/utilities/red_medkit", "y":90},
+        "level=2,facing=east":{"model":"tspaintball:block/utilities/red_medkit", "y":90},
+        "level=3,facing=east":{"model":"tspaintball:block/utilities/red_medkit", "y":90},
+        "level=4,facing=east":{"model":"tspaintball:block/utilities/red_medkit", "y":90},
+
+        "level=0,facing=west":{"model":"tspaintball:block/utilities/red_medkit_cooldown", "y":90},
+        "level=1,facing=west":{"model":"tspaintball:block/utilities/red_medkit", "y":90},
+        "level=2,facing=west":{"model":"tspaintball:block/utilities/red_medkit", "y":90},
+        "level=3,facing=west":{"model":"tspaintball:block/utilities/red_medkit", "y":90},
+        "level=4,facing=west":{"model":"tspaintball:block/utilities/red_medkit", "y":90}
+    }
+}

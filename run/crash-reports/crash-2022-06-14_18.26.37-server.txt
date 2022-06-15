@@ -1,0 +1,133 @@
+---- Minecraft Crash Report ----
+// Hey, that tickles! Hehehe!
+
+Time: 14/06/22 18:26
+Description: Ticking entity
+
+java.lang.NullPointerException: Ticking entity
+	at uk.nf.teamserpentalise.tspaintball.init.eventinit.Hurt(eventinit.java:18) ~[main/:?] {re:classloading}
+	at net.minecraftforge.eventbus.ASMEventHandler_0_eventinit_Hurt_LivingHurtEvent.invoke(.dynamic) ~[?:?] {}
+	at net.minecraftforge.eventbus.ASMEventHandler.invoke(ASMEventHandler.java:85) ~[eventbus-4.0.0.jar:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:302) ~[eventbus-4.0.0.jar:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:283) ~[eventbus-4.0.0.jar:?] {}
+	at net.minecraftforge.common.ForgeHooks.onLivingHurt(ForgeHooks.java:349) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.LivingEntity.actuallyHurt(LivingEntity.java:1474) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.LivingEntity.hurt(LivingEntity.java:984) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.passive.BatEntity.hurt(BatEntity.java:178) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.Entity.lavaHurt(Entity.java:466) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.Entity.baseTick(Entity.java:428) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.LivingEntity.baseTick(LivingEntity.java:295) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.MobEntity.baseTick(MobEntity.java:233) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.Entity.tick(Entity.java:386) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.LivingEntity.tick(LivingEntity.java:2115) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.MobEntity.tick(MobEntity.java:300) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.passive.BatEntity.tick(BatEntity.java:96) ~[forge:?] {re:classloading}
+	at net.minecraft.world.server.ServerWorld.tickNonPassenger(ServerWorld.java:611) ~[forge:?] {re:classloading}
+	at net.minecraft.world.World.guardEntityTick(World.java:554) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.server.ServerWorld.tick(ServerWorld.java:404) ~[forge:?] {re:classloading}
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:851) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:787) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.integrated.IntegratedServer.tickServer(IntegratedServer.java:78) ~[forge:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:642) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:232) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_322] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at uk.nf.teamserpentalise.tspaintball.init.eventinit.Hurt(eventinit.java:18) ~[main/:?] {re:classloading}
+	at net.minecraftforge.eventbus.ASMEventHandler_0_eventinit_Hurt_LivingHurtEvent.invoke(.dynamic) ~[?:?] {}
+	at net.minecraftforge.eventbus.ASMEventHandler.invoke(ASMEventHandler.java:85) ~[eventbus-4.0.0.jar:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:302) ~[eventbus-4.0.0.jar:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:283) ~[eventbus-4.0.0.jar:?] {}
+	at net.minecraftforge.common.ForgeHooks.onLivingHurt(ForgeHooks.java:349) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.LivingEntity.actuallyHurt(LivingEntity.java:1474) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.LivingEntity.hurt(LivingEntity.java:984) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.passive.BatEntity.hurt(BatEntity.java:178) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.Entity.lavaHurt(Entity.java:466) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.Entity.baseTick(Entity.java:428) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.LivingEntity.baseTick(LivingEntity.java:295) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.MobEntity.baseTick(MobEntity.java:233) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.Entity.tick(Entity.java:386) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.LivingEntity.tick(LivingEntity.java:2115) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.MobEntity.tick(MobEntity.java:300) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.passive.BatEntity.tick(BatEntity.java:96) ~[forge:?] {re:classloading}
+	at net.minecraft.world.server.ServerWorld.tickNonPassenger(ServerWorld.java:611) ~[forge:?] {re:classloading}
+-- Entity being ticked --
+Details:
+	Entity Type: minecraft:bat (net.minecraft.entity.passive.BatEntity)
+	Entity ID: 136
+	Entity Name: Bat
+	Entity's Exact location: 29.92, 10.86, 35.98
+	Entity's Block location: World: (29,10,35), Chunk: (at 13,0,3 in 1,2; contains blocks 16,0,32 to 31,255,47), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Entity's Momentum: 0.15, -0.14, -0.17
+	Entity's Passengers: []
+	Entity's Vehicle: ~~ERROR~~ NullPointerException: null
+Stacktrace:
+	at net.minecraft.world.World.guardEntityTick(World.java:554) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.server.ServerWorld.tick(ServerWorld.java:404) ~[forge:?] {re:classloading}
+
+
+-- Affected level --
+Details:
+	All players: 1 total; [ServerPlayerEntity['Dev'/147, l='ServerLevel[New World]', x=28.69, y=79.89, z=17.34]]
+	Chunk stats: ServerChunkCache: 2704
+	Level dimension: minecraft:overworld
+	Level spawn location: World: (0,79,208), Chunk: (at 0,4,0 in 0,13; contains blocks 0,0,208 to 15,255,223), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 127266 game time, 62402 day time
+	Level name: New World
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: true
+	Level weather: Rain time: 1 (now: false), thunder time: 1 (now: false)
+	Known server brands: forge
+	Level was modded: true
+	Level storage version: 0x04ABD - Anvil
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:851) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:787) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.integrated.IntegratedServer.tickServer(IntegratedServer.java:78) ~[forge:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:642) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:232) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_322] {}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.16.5
+	Minecraft Version ID: 1.16.5
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_322, Temurin
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Temurin
+	Memory: 837774440 bytes (798 MB) / 2709520384 bytes (2584 MB) up to 5717360640 bytes (5452 MB)
+	CPUs: 6
+	JVM Flags: 2 total; -XX:+IgnoreUnrecognizedVMOptions -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump
+	ModLauncher: 8.1.3+8.1.3+main-8.1.x.c94d18ec
+	ModLauncher launch target: fmluserdevclient
+	ModLauncher naming: mcp
+	ModLauncher services: 
+		/mixin-0.8.4.jar mixin PLUGINSERVICE 
+		/eventbus-4.0.0.jar eventbus PLUGINSERVICE 
+		/forge-1.16.5-36.2.35_mapped_official_1.16.5-launcher.jar object_holder_definalize PLUGINSERVICE 
+		/forge-1.16.5-36.2.35_mapped_official_1.16.5-launcher.jar runtime_enum_extender PLUGINSERVICE 
+		/accesstransformers-3.0.1.jar accesstransformer PLUGINSERVICE 
+		/forge-1.16.5-36.2.35_mapped_official_1.16.5-launcher.jar capability_inject_definalize PLUGINSERVICE 
+		/forge-1.16.5-36.2.35_mapped_official_1.16.5-launcher.jar runtimedistcleaner PLUGINSERVICE 
+		/mixin-0.8.4.jar mixin TRANSFORMATIONSERVICE 
+		/forge-1.16.5-36.2.35_mapped_official_1.16.5-launcher.jar fml TRANSFORMATIONSERVICE 
+	FML: 36.2
+	Forge: net.minecraftforge:36.2.35
+	FML Language Providers: 
+		javafml@36.2
+		minecraft@1
+	Mod List: 
+		client-extra.jar                                  |Minecraft                     |minecraft                     |1.16.5              |DONE      |Manifest: a1:d4:5e:04:4f:d3:d6:e0:7b:37:97:cf:77:b0:de:ad:4a:47:ce:8c:96:49:5f:0a:cf:8c:ae:b2:6d:4b:8a:3f
+		forge-1.16.5-36.2.35_mapped_official_1.16.5-recomp|Forge                         |forge                         |36.2.35             |DONE      |Manifest: NOSIGNATURE
+		main                                              |TS Paaintballing              |tspaintball                   |0.2.1               |DONE      |Manifest: NOSIGNATURE
+	Crash Report UUID: baf66304-1714-4e79-86fe-11ba47f98a93
+	Player Count: 1 / 8; [ServerPlayerEntity['Dev'/147, l='ServerLevel[New World]', x=28.69, y=79.89, z=17.34]]
+	Data Packs: vanilla, mod:forge, mod:tspaintball
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'forge'

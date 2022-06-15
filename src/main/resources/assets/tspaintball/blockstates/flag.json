@@ -1,0 +1,23 @@
+{
+    "variants":{
+        "team=1,facing=north": {"model":"tspaintball:block/utilities/flag/flag_red"},
+        "team=1,facing=east": {"model":"tspaintball:block/utilities/flag/flag_red", "y": 90},
+        "team=1,facing=south": {"model":"tspaintball:block/utilities/flag/flag_red","y":180},
+        "team=1,facing=west": {"model":"tspaintball:block/utilities/flag/flag_red","y":270},
+
+        "team=2,facing=north": {"model":"tspaintball:block/utilities/flag/flag_green"},
+        "team=2,facing=east": {"model":"tspaintball:block/utilities/flag/flag_green", "y":90},
+        "team=2,facing=south": {"model":"tspaintball:block/utilities/flag/flag_green", "y":180},
+        "team=2,facing=west": {"model":"tspaintball:block/utilities/flag/flag_green", "y":270},
+
+        "team=3,facing=north": {"model":"tspaintball:block/utilities/flag/flag_blue"},
+        "team=3,facing=east": {"model":"tspaintball:block/utilities/flag/flag_blue", "y":90},
+        "team=3,facing=south": {"model":"tspaintball:block/utilities/flag/flag_blue", "y":180},
+        "team=3,facing=west": {"model":"tspaintball:block/utilities/flag/flag_blue", "y":270},
+
+        "team=0,facing=north": {"model":"tspaintball:block/utilities/flag/flag_white"},
+        "team=0,facing=east": {"model":"tspaintball:block/utilities/flag/flag_white", "y":90},
+        "team=0,facing=south": {"model":"tspaintball:block/utilities/flag/flag_white", "y":180},
+        "team=0,facing=west": {"model":"tspaintball:block/utilities/flag/flag_white", "y":270}
+    }
+}

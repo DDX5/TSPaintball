@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "iRi",
+        "RAR",
+        "iRi"
+    ],
+    "key": {
+        "i": {
+            "item": "minecraft:iron_ingot"
+        },
+        "R": {
+            "item": "minecraft:white_wool"
+        },
+        "A": {
+            "item": "minecraft:arrow"
+        }
+    },
+    "result": {
+        "item": "tspaintball:ref_equip",
+        "count": 1
+    }
+}

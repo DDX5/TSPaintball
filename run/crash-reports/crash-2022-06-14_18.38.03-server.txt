@@ -1,0 +1,127 @@
+---- Minecraft Crash Report ----
+// Who set us up the TNT?
+
+Time: 14/06/22 18:38
+Description: Ticking entity
+
+java.lang.ClassCastException: net.minecraft.entity.player.ServerPlayerEntity cannot be cast to net.minecraft.entity.projectile.ArrowEntity
+	at uk.nf.teamserpentalise.tspaintball.init.eventinit.Hurt(eventinit.java:25) ~[main/:?] {re:classloading}
+	at net.minecraftforge.eventbus.ASMEventHandler_0_eventinit_Hurt_LivingHurtEvent.invoke(.dynamic) ~[?:?] {}
+	at net.minecraftforge.eventbus.ASMEventHandler.invoke(ASMEventHandler.java:85) ~[eventbus-4.0.0.jar:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:302) ~[eventbus-4.0.0.jar:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:283) ~[eventbus-4.0.0.jar:?] {}
+	at net.minecraftforge.common.ForgeHooks.onLivingHurt(ForgeHooks.java:349) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.LivingEntity.actuallyHurt(LivingEntity.java:1474) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.LivingEntity.hurt(LivingEntity.java:984) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.monster.MonsterEntity.hurt(MonsterEntity.java:64) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.monster.ZombieEntity.hurt(ZombieEntity.java:262) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.projectile.AbstractArrowEntity.onHitEntity(AbstractArrowEntity.java:326) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.projectile.ProjectileEntity.onHit(ProjectileEntity.java:109) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.projectile.AbstractArrowEntity.tick(AbstractArrowEntity.java:188) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.projectile.ArrowEntity.tick(ArrowEntity.java:93) ~[forge:?] {re:classloading}
+	at net.minecraft.world.server.ServerWorld.tickNonPassenger(ServerWorld.java:611) ~[forge:?] {re:classloading}
+	at net.minecraft.world.World.guardEntityTick(World.java:554) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.server.ServerWorld.tick(ServerWorld.java:404) ~[forge:?] {re:classloading}
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:851) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:787) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.integrated.IntegratedServer.tickServer(IntegratedServer.java:78) ~[forge:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:642) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:232) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_322] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at uk.nf.teamserpentalise.tspaintball.init.eventinit.Hurt(eventinit.java:25) ~[main/:?] {re:classloading}
+	at net.minecraftforge.eventbus.ASMEventHandler_0_eventinit_Hurt_LivingHurtEvent.invoke(.dynamic) ~[?:?] {}
+	at net.minecraftforge.eventbus.ASMEventHandler.invoke(ASMEventHandler.java:85) ~[eventbus-4.0.0.jar:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:302) ~[eventbus-4.0.0.jar:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:283) ~[eventbus-4.0.0.jar:?] {}
+	at net.minecraftforge.common.ForgeHooks.onLivingHurt(ForgeHooks.java:349) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.LivingEntity.actuallyHurt(LivingEntity.java:1474) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.LivingEntity.hurt(LivingEntity.java:984) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.monster.MonsterEntity.hurt(MonsterEntity.java:64) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.monster.ZombieEntity.hurt(ZombieEntity.java:262) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.projectile.AbstractArrowEntity.onHitEntity(AbstractArrowEntity.java:326) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.projectile.ProjectileEntity.onHit(ProjectileEntity.java:109) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.projectile.AbstractArrowEntity.tick(AbstractArrowEntity.java:188) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.projectile.ArrowEntity.tick(ArrowEntity.java:93) ~[forge:?] {re:classloading}
+	at net.minecraft.world.server.ServerWorld.tickNonPassenger(ServerWorld.java:611) ~[forge:?] {re:classloading}
+-- Entity being ticked --
+Details:
+	Entity Type: minecraft:arrow (net.minecraft.entity.projectile.ArrowEntity)
+	Entity ID: 524
+	Entity Name: Arrow
+	Entity's Exact location: 51.56, 75.74, 42.74
+	Entity's Block location: World: (51,75,42), Chunk: (at 3,4,10 in 3,2; contains blocks 48,0,32 to 63,255,47), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Entity's Momentum: 1.11, -3.43, 3.49
+	Entity's Passengers: []
+	Entity's Vehicle: ~~ERROR~~ NullPointerException: null
+Stacktrace:
+	at net.minecraft.world.World.guardEntityTick(World.java:554) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.server.ServerWorld.tick(ServerWorld.java:404) ~[forge:?] {re:classloading}
+
+
+-- Affected level --
+Details:
+	All players: 1 total; [ServerPlayerEntity['Dev'/161, l='ServerLevel[New World]', x=48.17, y=84.40, z=32.06]]
+	Chunk stats: ServerChunkCache: 2506
+	Level dimension: minecraft:overworld
+	Level spawn location: World: (0,79,208), Chunk: (at 0,4,0 in 0,13; contains blocks 0,0,208 to 15,255,223), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 127545 game time, 62681 day time
+	Level name: New World
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: true
+	Level weather: Rain time: 1 (now: false), thunder time: 1 (now: false)
+	Known server brands: forge
+	Level was modded: true
+	Level storage version: 0x04ABD - Anvil
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:851) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:787) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.integrated.IntegratedServer.tickServer(IntegratedServer.java:78) ~[forge:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:642) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:232) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_322] {}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.16.5
+	Minecraft Version ID: 1.16.5
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_322, Temurin
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Temurin
+	Memory: 717603128 bytes (684 MB) / 2727346176 bytes (2601 MB) up to 5717360640 bytes (5452 MB)
+	CPUs: 6
+	JVM Flags: 2 total; -XX:+IgnoreUnrecognizedVMOptions -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump
+	ModLauncher: 8.1.3+8.1.3+main-8.1.x.c94d18ec
+	ModLauncher launch target: fmluserdevclient
+	ModLauncher naming: mcp
+	ModLauncher services: 
+		/mixin-0.8.4.jar mixin PLUGINSERVICE 
+		/eventbus-4.0.0.jar eventbus PLUGINSERVICE 
+		/forge-1.16.5-36.2.35_mapped_official_1.16.5-launcher.jar object_holder_definalize PLUGINSERVICE 
+		/forge-1.16.5-36.2.35_mapped_official_1.16.5-launcher.jar runtime_enum_extender PLUGINSERVICE 
+		/accesstransformers-3.0.1.jar accesstransformer PLUGINSERVICE 
+		/forge-1.16.5-36.2.35_mapped_official_1.16.5-launcher.jar capability_inject_definalize PLUGINSERVICE 
+		/forge-1.16.5-36.2.35_mapped_official_1.16.5-launcher.jar runtimedistcleaner PLUGINSERVICE 
+		/mixin-0.8.4.jar mixin TRANSFORMATIONSERVICE 
+		/forge-1.16.5-36.2.35_mapped_official_1.16.5-launcher.jar fml TRANSFORMATIONSERVICE 
+	FML: 36.2
+	Forge: net.minecraftforge:36.2.35
+	FML Language Providers: 
+		javafml@36.2
+		minecraft@1
+	Mod List: 
+		client-extra.jar                                  |Minecraft                     |minecraft                     |1.16.5              |DONE      |Manifest: a1:d4:5e:04:4f:d3:d6:e0:7b:37:97:cf:77:b0:de:ad:4a:47:ce:8c:96:49:5f:0a:cf:8c:ae:b2:6d:4b:8a:3f
+		forge-1.16.5-36.2.35_mapped_official_1.16.5-recomp|Forge                         |forge                         |36.2.35             |DONE      |Manifest: NOSIGNATURE
+		main                                              |TS Paaintballing              |tspaintball                   |0.2.1               |DONE      |Manifest: NOSIGNATURE
+	Crash Report UUID: d356835b-7e88-4586-bdec-ac171792470b
+	Player Count: 1 / 8; [ServerPlayerEntity['Dev'/161, l='ServerLevel[New World]', x=48.17, y=84.40, z=32.06]]
+	Data Packs: vanilla, mod:forge, mod:tspaintball
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'forge'

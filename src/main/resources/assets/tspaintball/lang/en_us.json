@@ -1,0 +1,55 @@
+{
+  "Comment": "Weapons",
+  "item.tspaintball.red_pistol": "Red Team Pistol",
+  "item.tspaintball.green_pistol": "Green Team Pistol",
+  "item.tspaintball.blue_pistol": "Blue Team Pistol",
+
+  "item.tspaintball.red_shotgun": "Red Team Shotgun",
+  "item.tspaintball.green_shotgun": "Green Team Shotgun",
+  "item.tspaintball.blue_shotgun": "Blue Team Shotgun",
+
+  "Comment": "Utilities",
+  "block.tspaintball.red_medkit": "Red Team Med kit",
+  "block.tspaintball.green_medkit": "Green Team Med kit",
+  "block.tspaintball.blue_medkit": "Blue Team Med kit",
+
+  "block.tspaintball.red_pod": "Red Team Ammo Pod",
+  "block.tspaintball.green_pod": "Green Team Ammo Pod",
+  "block.tspaintball.blue_pod": "Blue Team Ammo Pod",
+
+  "block.tspaintball.flag": "Flag",
+
+  "Comment": "Armor",
+  "item.tspaintball.blue_boots": "Blue Team Boots",
+  "item.tspaintball.blue_leggings": "Blue Team Leggings",
+  "item.tspaintball.blue_chestplate": "Blue Team Chestplate",
+  "item.tspaintball.blue_helmet": "Blue Team Helmet",
+
+  "item.tspaintball.red_boots": "Red Team Boots",
+  "item.tspaintball.red_leggings": "Red Team Leggings",
+  "item.tspaintball.red_chestplate": "Red Team Chestplate",
+  "item.tspaintball.red_helmet": "Red Team Helmet",
+
+  "item.tspaintball.green_boots": "Green Team Boots",
+  "item.tspaintball.green_leggings": "Green Team Leggings",
+  "item.tspaintball.green_chestplate": "Green Team Chestplate",
+  "item.tspaintball.green_helmet": "Green Team Helmet",
+
+  "item.tspaintball.white_boots": "Referee Boots",
+  "item.tspaintball.white_leggings": "Referee Leggings",
+  "item.tspaintball.white_chestplate": "Referee Chestpate",
+  "item.tspaintball.white_helmet": "Referee Helmet",
+
+  "Comment": "Equip Items",
+  "item.tspaintball.red_equip": "Red Team Item Box",
+  "item.tspaintball.blue_equip": "Blue Team Item Box",
+  "item.tspaintball.green_equip": "Green Team Item Box",
+  "item.tspaintball.ref_equip": "Referee Item Box",
+
+  "Comment": "Special Items",
+  "item.tspaintball.remove": "Rod Of Removal",
+
+  "Comment": "Creative Tabs",
+  "itemGroup.weapons": "Paintball Weapons",
+  "itemGroup.utilities": "Paintball Equipment"
+}
